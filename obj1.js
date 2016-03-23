@@ -1,48 +1,49 @@
-var person = {};
-person.name = 'my name';
-person.age = 30;
-person.getName = function(){
-  return this.name;
-}
+// var person = {};
+// person.name = 'my name';
+// person.age = 30;
+// person.getName = function(){
+//   return this.name;
+// }
 
 
-var person = {
-  name : 'my name',
-  age : 20,
-  getName : function(){
-    return this.name;
-  }
-};
+// var person = {
+//   name : 'my name',
+//   age : 20,
+//   getName : function(){
+//     return this.name;
+//   }
+// };
 
-person.newAttr = 'height';
-console.log(person.newAttr);
-delete person.name;
-console.log(person.name);
+// person.newAttr = 'height';
+// console.log(person.newAttr);
+// delete person.name;
+// console.log(person.name);
 
 
 
-var person = {
-  name : "nico",
-  age : 30,
-  height : 165,
-  getName : function(){
-    return this.name;
-  },
-  getAge : function(){
-    return this.age;
-  },
-  setName : function(name){
-    this.name = name;
-  },
-  setAge : function(age){
-    this.age = age;
-  }
+// var person = {
+//   name : "nico",
+//   age : 30,
+//   height : 165,
+  // getName : function(){
+  //   return this.name;
+  // },
+  // getAge : function(){
+  //   return this.age;
+  // },
+  // setName : function(name){
+  //   this.name = name;
+  // },
+  // setAge : function(age){
+  //   this.age = age;
+  // }
 
-}
-// console.log(person.getName());
-// console.log(person.getAge());
-person.setName("jfeng");
-alert(person.getName());
+
+// }
+// // console.log(person.getName());
+// // console.log(person.getAge());
+// person.setName("jfeng");
+// alert(person.getName());
 
 
 /*var dog ={
@@ -67,3 +68,16 @@ var dog1 = new Dog('hasiqi','white','meet');
 console.log(dog1.type)
 
 */
+function Person(name,age){
+   this.name = name;
+   this.age = age;
+   this.setGet = function(key,val){
+    if(val){
+      this[key] = val
+    }
+    return this[key]
+   }
+}
+var person =new Person("nico",30);
+person.setGet("name")
+alert(person.setGet("name"));
