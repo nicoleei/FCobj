@@ -3,13 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
+  <style>
+    .table_wrap{
+      width:80%;
+      height:100px;
+      margin:0 auto;
+      background:#eee;
+      padding:30px 80px;
+    }
+    .table_up{
+      margin-left:50px;
+
+    }
+    .table_up label,.table_up input{
+      display:block;
+      float:left;
+    }
+    .table_up label{
+      margin-right:30px;
+    }
+    .table_up input{
+      margin-right:50px;
+    }
+     .table_up button{
+      display:block;
+      float:left;
+     }
+    table{
+      clear:both;
+      width:100%;
+      margin-top:50px;
+     border-collapse:collapse;
+     border:none;
+
+    }
+   /* table td,table th{
+      border-left:1px solid black;
+      border-top:1px solid black;
+
+    }*/
+    table td,table th{
+      text-align:center;
+      border:1px solid black;
+    }
+  </style>
 </head>
 <body>
-  <h1>page 5</h1>
-  <table>
-    <tr>
-      <td>1111</td>
-    </tr>
-  </table>
+  <div class="table_wrap">
+    <div class="table_up">
+      <label>俱乐部</label>
+      <input type="text"/>
+      <label>俱乐部</label>
+      <input type="text"/>
+      <button>编辑</button>
+      <button>编辑</button>
+    </div>
+    <table>
+      <tr>
+        <th>姓名</th>
+        <th>姓名</th>
+        <th>姓名</th>
+        <th>姓名</th>
+        <th>姓名</th>
+        <th>姓名</th>
+      </tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+    </table>
+
+  </div>
 </body>
 </html>
