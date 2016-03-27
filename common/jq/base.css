@@ -1,0 +1,117 @@
+/*公共样式*/
+*{margin:0; padding:0;}
+body {font-size: 12px; color: #333; font-family:"宋体", arial;}
+table {border-collapse:collapse;border-spacing:0;} 
+fieldset,img {border:0} 
+address,caption,cite,code,dfn,em,strong,th,var {font-style:normal;font-weight:normal} 
+ol,ul {list-style:none} 
+caption,th {text-align:left} 
+input{font-family:inherit; font-size:inherit; font-weight:inherit; vertical-align:middle; margin-top:-2px; margin-bottom:1px; }
+textarea {margin-left:0px;}
+h1,h2,h3,h4,h5,h6 {font-size:100%;font-weight:normal} 
+q:before,q:after {content:''} 
+abbr,acronym { border:0}
+i,em {font-style: normal;}
+label input,input {vertical-align:middle;}
+select {vertical-align: top;  *vertical-align: middle;}
+a { color: #333; text-decoration: none;}
+a:hover {text-decoration: underline;}
+.clearfix:after {visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+.none {display: none;}
+
+/*文字排版、颜色*/
+.red,.red a{color:#ff000b}
+.mt10 {margin-top: 10px;}
+.mb4 {margin-bottom:4px;}
+.input_w {width: 30px; height: 17px; line-height: 17px; text-align: center; margin: 0px 3px; color: #f00; font-weight: 700; }
+.input_35 {width: 35px; height: 17px; line-height: 17px; text-align: center; margin-right: 3px; color: #f00; }
+.input_350 {width: 350px; height: 20px; }
+.textear_350 {width: 350px; margin: 5px 5px 5px 0; vertical-align: middle;}
+.sel_40 {width: 40px; height: 20px;}
+.sel_45 {width: 45px; height: 20px;}
+
+/*主内容样式*/
+.contenter {width: 980px;  margin:0px auto; }
+
+/*推广联盟头部样式*/
+.union { margin: 0px auto; width: 980px; height:67px; }
+.union .header .header_left { float: left; }
+.union .header .header_left i {width: 466px; height: 37px; background: url(../../../images/o2o/unionuser/logo.png) no-repeat ; float: left; margin-top: 18px;  text-indent: -9999em; overflow: hidden;}
+.union .header .header_left span {padding-left: 10px; padding-top: 35px; display: inline-block; font-size: 16px; font-family: "微软雅黑"; color: #999;}
+.union .header .header_right {float: right; padding-left: 50px; padding-top: 38px; color: #eee; display: inline-block;}
+
+
+
+.regist_line {width: 100%; height: 105px; background: url(../../images/union/n_banan.jpg)  no-repeat; background-size:100% 100%; }
+.state_warp {width:980px; margin:0px auto;}
+.state_left {width: 90px; display: inline-block; float: left}
+.state_left img {width: 80px; height: 80px; border: solid 2px #e1e1e1; border-radius:100%; min-width: 80px; overflow: hidden; margin-top:10px;}
+.state_right { margin-left:10px; float: left; margin-top:15px; font-family: "微软雅黑";width: 860px; }
+.sta_rtop {height:30px; line-height: 30px;}
+.sta_rtop i {font-style: normal; font-size: 18px; font-family: "微软雅黑"; color: #fff; }
+.sta_rtop strong { font-size: 18px; color: #fff;  }
+.sta_rtop span { margin-left: 10px; font-size: 14px; color: #fff;}
+.sta_rbot {height: 25px; line-height: 25px;}
+.sta_rbot span {display: inline-block; margin-right:10px; color: #fff;}
+.sta_rtop span a {color:#fff; }
+/*底部样式*/
+.footer {width: 100%; background:#f7f7f7;   padding-bottom: 10px;}
+.foot_warp {width: 980px;  margin: 0px auto;}
+.foot_warp ul {padding-top: 10px;}
+.foot_warp ul li { padding: 0px 30px; *padding: 0px 42px; border-right: dashed 1px #bababa; float: left;}
+.foot_warp ul li.nopadding {padding-left: 0px; }
+.foot_warp ul li.rnopadding {padding-right: 0px; border-right:dashed 0px #bababa; }
+.foot_warp ul li.noline {border-right:dashed 0px #bababa;}
+.foot_warp ul li dl dt {float: left; width: 25px; height: 30px; display: inline-block; }
+.foot_warp ul li dl dt.a1 {background: url(../../images/union/icons.png) no-repeat 0px -160px;}
+.foot_warp ul li dl dt.a2 {background: url(../../images/union/icons.png) no-repeat 0px -210px;}
+.foot_warp ul li dl dt.a3 {background: url(../../images/union/icons.png) no-repeat 0px -257px;}
+.foot_warp ul li dl dt.a4 {background: url(../../images/union/icons.png) no-repeat 0px -305px;}
+.foot_warp ul li dl dt.a5 {background: url(../../images/union/icons.png) no-repeat 0px -353px;}
+.foot_warp ul li dl dd {float: left; padding-left: 5px;}
+.foot_warp ul li dl dd h2 {width: 92px; *width: auto; display: block; font-size: 16px; font-family: "微软雅黑"; color: #666; height: 30px; line-height: 30px; border-bottom: solid 1px #e3e3e3; }
+.foot_warp ul li dl dd p {padding-left: 10px; background: url(../../images/union/icons.png) no-repeat 0px -130px; margin: 10px 0; }
+.foot_warp ul li dl dd p a {color: #666;}
+.foot_warp ul li dl dd.foot_kefu p {padding-left: 0px; background: none; color: #666; }
+.foot_warp ul li dl dd.foot_kefu p.c1 {color: #999;}
+.foot_warp ul li dl dd.foot_kefu p.red {color: #FF323B;}
+.foot_qq i {width: 81px; height: 23px; display: inline-block;/* background: url(../../images/union/icons1.png) no-repeat 0px 0px; */margin-left: 5px; vertical-align:middle; cursor: pointer;}
+.foot_info,.foot_warn {width: 980px; margin: 0px auto; text-align: center; padding-top: 10px; }
+.foot_info {color: #ccc;}
+.foot_info span {padding: 0px 10px; color: #787878;}
+.foot_info a {color: #666;}
+.foot_warn {padding-left: 15px; margin-bottom: 10px;/* background: url(../../images/union/icons1.png) no-repeat 290px -45px;*/ color: #787878;}
+.foot_warn em {color: #FF323B;}
+
+
+
+
+#PrintActiveX_Bg {
+	display:none;
+	position:fixed;top:0;left:0;z-index:2;
+	width:100%;height:100%;background:#ccc;
+	opacity:0.6;filter: Alpha(opacity=60);
+}
+#PrintActiveX_Div {
+	display:none;
+	position:absolute;z-index:3;
+	top:0;left:50%;
+	margin:0 0 0 -207px;
+	width:415px;
+	padding:10px 16px 20px 17px;
+	background:url(/caipiao_simple/home/images/o2o/unionuser/pri_k.png) no-repeat 0 0;
+}
+.PrintActiveX_Div_Close {height:32px;padding-right:10px;text-align:right;}
+.PrintActiveX_Div_Close span {color:#444;font:bold 12px/18px tahoma;cursor:pointer;}
+
+/*浮动客服*/
+#floatDivBoxs{width:223px;background:#fff;position:fixed;top:180px;right:0;z-index:999;}
+#floatDivBoxs .floatDtt{width:100%;height:43px;line-height:43px; vertical-align: middle; background:#fff; border: solid 1px #e2e2e2; padding-left: 10px; position:relative;}
+#floatDivBoxs .floatDtt dl dt {width: 98px; float: left;}
+#floatDivBoxs .floatDtt dl dd {float: left;}
+#floatDivBoxs .floatDtt .wap {margin-top: 6px; *margin-top: 9px;}
+.floatShadow{ background:#fff;box-shadow:-2px 0 3px rgba(0,0,0,0.25);}
+#rightArrow{width:50px;height:45px;background:url(/caipiao_simple/home/images/o2o/unionuser/online_arrow.jpg) no-repeat;position:fixed;top:180px;right:223px;z-index:999;}
+#rightArrow a{display:block;height:45px;}

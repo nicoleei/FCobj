@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>俱乐部信息管理</title>
+    <link href="/caipiao_simple/home/css/o2o/unionuser/base.css" rel="stylesheet" type="text/css" />
+    <link href="/caipiao_simple/home/css/o2o/unionuser/union.css" rel="stylesheet" type="text/css" />
+	<link href="/caipiao_simple/home/css/union/jquery-ui-1.10.3.custom.min.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="favicon.ico" mce_href="favicon.ico" type="image/x-icon" />
+</head>
+<body>
+<div id="wrap">
+ <!---右边开始-->
+     <div class="bread">
+        <i></i>
+        <span class="font_blue">俱乐部信息管理</span>
+        <span>></span>
+        <span>出票网点管理</span>
+     </div>
+     <div class="right_con ">
+     <!---查询内容开始-->
+     <div class="query_warp clearfix">
+         <div class="query_left">
+             <span>
+                 <label for="">俱乐部编号:</label>
+                 <input type="text" id="username" class="input_115">
+             </span>
+             <span>
+                 <label for="date">网点编号:</label>
+                 <input type="text" class="input_115" id="date" value="">
+             </span>
+			 
+         </div>
+         <div class="query_right">
+             <button id="search">开始查询</button>
+             <button id="search">提交</button>
+         </div>
+     </div>
+     <!---查询内容结束-->
+     <div class="query_tab">
+         <table  width="100%">
+             <thead>
+				<tr>
+					 <th width="">俱乐部编号</th>
+					 <th width="">网点编号</th>
+					 <th width="">网点名称</th>
+					 <th width="">姓名</th>
+					 <th width="">手机号</th>
+					 <th width="">绑定状态</th>
+					 <th width="">绑定时间</th>
+					 <th width="">编辑</th>
+				 </tr>
+             </thead>
+             <tbody id="data-content">
+			 
+             </tbody>
+         </table>
+     </div>
+     <div class="pages_warp">
+		<span id="first_page">首页</span>
+		<span id="prev_page">&lt;</span>
+         <ul id="pageArea"></ul>
+		 <span id="next_page">&gt;</span>
+		 <span id="last_page">尾页</span>
+         <span>
+             共<em id="all_count"></em>页，到第<input type="text" class="input_50" id="go_page" />页 <button id="go_submit">确定</button>
+         </span>
+    </div>
+</div>
+</div>
+ <!---右边结束--> 
+<script type="text/javascript" src="/caipiao_simple/home/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/caipiao_simple/home/js/jquery-ui-1.10.3.custom.min.js"></script>
+<script type="text/javascript" src="/caipiao_simple/home/js/o2o/superboss/common.js"></script>
+<script type="text/javascript">
+(function($){
+    
+    getJsonToAjaxSalePointNo($('#salePointNo'));
+    
+    params = {'username':$('#username'),'startTime':$('#date'),'endTime':$('#date1'),'salePointNo':$('#salePointNo')};
+    pageConfig.init({'params':params,'ajaxUrl':'/caipiao_simple/home/jsp/o2o/superboss/salePointRelation_List.jsp',
+        'succesFun':succesFun,'errorFun':errorFun});
+    loadDate();
+    getJosnToAjax();
+
+    function succesFun(msg){
+        var html = '';
+        if(msg.result == 'OK'){
+            for(var i=0;i<msg.data.length;i++){
+                html += '<tr>';
+                    html += '<td>'+msg.data[i].SALE_POINT_NO+'</td>';
+                    html += '<td>'+msg.data[i].TICKET_POINT_NO+'</td>';
+                    html += '<td>'+msg.data[i].TICKET_POINT_NAME+'</td>';
+                    html += '<td>'+msg.data[i].BOSS_NAME+'</td>';
+                    html += '<td>'+msg.data[i].BOSS_MOBILE+'</td>';
+                    html += '<td>'+msg.data[i].STATUS+'</td>';
+                    html += '<td>'+msg.data[i].CREATE_TIME+'</td>';
+                html += '</tr>';
+            }
+        }else{
+            html += '<tr><td colspan="6">'+msg.result+'</td></tr>';
+        }
+        $('#data-content').html(html);
+        
+    }
+    
+    function errorFun(a,b,c){
+        $('#data-content').html('<tr><td colspan="6">加载失败，请刷新！</td></tr>');
+    }
+    
+
+
+    
+})(window.jQuery);
+</script>
+
+
+</body>
+</html>
+
