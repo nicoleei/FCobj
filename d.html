@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    .box{background:#eee;border:1px solid red;width:300px;height:300px;position:absolute;}
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <div class="box" id="box" style="display:none;">
+   <div>
+     <label>name:</label>
+     <input id="J_name" type="text"/>
+   </div>
+    <div>
+     <label>age:</label>
+     <input id="J_age" type="text"/>
+   </div>
+    <div>
+     <label>height:</label>
+     <input id="J_height" type="text"/>
+   </div>
+   <input id="J_submit" type="submit"/>
+
+ </div> 
+ <button id="btn">button</button>
+ <script type="text/javascript" src="d:/study/jquery/jquery-1.11.3.js"></script>
+ <script type="text/javascript">
+  
+    
+    
+   function changeSize() {
+      var bleft = ($(document).width()-$("#box").width())/2+"px";
+      var btop = ($(document).height()-$("#box").height()-$(window).scrollTop())/2+"px";
+      $("#box").css({"left":bleft,"top":btop})
+    }
+  
+  $("#btn").click(function(){
+     changeSize();
+     $("#box").css("display","block");
+   })
+
+   $(window).resize(changeSize)
+
+   $("#J_submit").click(function(){
+     var nameVal = $("#J_name").val();
+     var ageVal = $("#J_age").val();
+     var heightVal = $("#J_height").val();
+
+     $.ajax({
+      type:"post",
+      url:'./',
+      data:{
+       nameVal:nameVal,
+       ageVal:ageVal,
+       heightVal:heightVal 
+      },
+      success:function(item){
+        alert(1);
+      }
+
+     })
+
+   })
+
+
+ </script>
+</body>
+</html>
