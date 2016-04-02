@@ -5,6 +5,15 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>page 2 test</h1>
+  <h1>page 22222 test</h1>
+  <script>
+    function GetQueryString(name) {
+      var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)","i");
+      var r = window.location.search.substr(1).match(reg);
+      if (r!=null) return (r[2]); return null;
+    }
+    var arg = GetQueryString('arg1')
+    alert(arg)
+  </script>
 </body>
 </html>
