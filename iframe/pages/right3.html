@@ -8,7 +8,7 @@
 <body>
   <h1>page 3</h1>
   <button id="J_test">click</button>
-  <input id="aaa" value="5/85">
+  <input id="aaa" value="85bread">
   <input id="bbb" value="222">
   <script>
     // var temparam = '{"param":[{"id": ' + $('#aaa').val()  +' },{"club_caiwu_bak1": '+ $('#bbb').val() +'}]}&currentpage=1&pageSize=10';
@@ -18,10 +18,9 @@
         type:"get",
         url:"aaaa.jsp",
         data:{
-          "param":bianliangparams,
-          "currentpage":0,
-          "currentSize":10
-
+          'param':bianliangparams,
+          'currrentPage':0,
+          'pageSize':10
         },
         success:function(msg){
           alert(msg)
